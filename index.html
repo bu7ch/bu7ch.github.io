@@ -17,17 +17,156 @@
       href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <!-- <link rel="stylesheet" href="css/themes/indigo-white.css" /> -->
-    <!-- <link rel="stylesheet" href="css/themes/green-white.css"> -->
-    <!-- <link rel="stylesheet" href="css/themes/red-white.css"> -->
-    <!-- <link rel="stylesheet" href="css/themes/grey-white.css"> -->
-    <!-- <link rel="stylesheet" href="css/themes/white-indigo.css"> -->
-    <!-- <link rel="stylesheet" href="css/themes/white-blue.css"> -->
-    <link rel="stylesheet" href="css/themes/white-grey.css" />
-    <!-- <link rel="stylesheet" href="css/themes/white-red.css"> -->
-    <!-- <link rel="stylesheet" href="css/themes/yellow-black.css"> -->
+    <style>
+      /* Reset CSS simplifié */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      /* Typography */
+      html {
+        font-family: "Roboto", sans-serif;
+      }
+
+      @media (min-width: 576px) {
+        html {
+          font-size: 14px;
+        }
+      }
+
+      @media (min-width: 768px) {
+        html {
+          font-size: 16px;
+        }
+      }
+
+      @media (min-width: 992px) {
+        html {
+          font-size: 18px;
+        }
+      }
+
+      @media (min-width: 1200px) {
+        html {
+          font-size: 20px;
+        }
+      }
+
+      .icons-social i {
+        font-size: 3em;
+      }
+
+      /* Custom Styles */
+      main {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        justify-content: center;
+        padding: 0 30px;
+        text-align: center;
+        background-color: #fff;
+        color: #333;
+      }
+
+      main > .intro {
+        font-family: "Reem Kufi", sans-serif;
+        font-size: 3.75em;
+        font-weight: 600;
+      }
+
+      main > .tagline {
+        font-size: 1.5rem;
+        margin: 1.5rem 0;
+        font-weight: 100;
+      }
+
+      .icons-social i {
+        padding: 10px;
+        color: #333;
+        transition: color 0.3s ease;
+      }
+
+      .icons-social a:hover i {
+        color: #777;
+      }
+
+      .devto {
+        margin-bottom: -0.2rem;
+      }
+
+      .devto svg {
+        margin-bottom: -0.2rem;
+        margin-left: 0.675rem;
+        width: 2.65rem;
+        height: 2.65rem;
+      }
+      
+      /* Style pour le bouton CV - en harmonie avec la charte existante */
+      .cv-link {
+        display: inline-block;
+        margin-top: 2.5rem;
+        padding: 0.8rem 2rem;
+        color: rgba(0, 0, 0, 0.7);
+        text-decoration: none;
+        font-family: "Roboto", sans-serif;
+        font-size: 1.1rem;
+        font-weight: 300;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 2px;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .cv-link:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        z-index: -1;
+      }
+      
+      .cv-link:hover {
+        color: rgba(0, 0, 0, 0.9);
+        border-color: rgba(0, 0, 0, 0.4);
+        transform: translateY(-2px);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      .cv-link:hover:before {
+        left: 0;
+      }
+      
+      .cv-link i {
+        margin-right: 0.5rem;
+        transition: transform 0.3s ease;
+      }
+      
+      .cv-link:hover i {
+        transform: translateX(3px);
+      }
+      
+      @media (max-width: 768px) {
+        .cv-link {
+          padding: 0.7rem 1.5rem;
+          font-size: 1rem;
+        }
+        
+        main > .intro {
+          font-size: 2.5em;
+        }
+        
+        main > .tagline {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
   </head>
   <body>
     <main>
@@ -53,6 +192,11 @@
           ><i class="fab fa-medium"></i
         ></a>
       </div>
+      
+      <!-- Lien vers le CV -->
+      <a href="cv.html" class="cv-link">
+        <i class="fas fa-file-alt"></i>View My CV
+      </a>
     </main>
   </body>
 </html>
